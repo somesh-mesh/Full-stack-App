@@ -21,7 +21,7 @@ class _FeedScreenState extends State<FeedScreen> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 0, right: 10),
-              child: Container(
+              child: SizedBox(
                 height: 120, // Fixed height for the stories ListView
                 child: ListView.builder(
                   padding: EdgeInsets.zero,

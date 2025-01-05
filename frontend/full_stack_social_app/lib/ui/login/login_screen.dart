@@ -112,6 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 class SignUpPrompt extends StatelessWidget {
+  const SignUpPrompt({super.key});
+
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -141,7 +143,7 @@ class SignUpPrompt extends StatelessWidget {
 
 class DividerWithText extends StatelessWidget {
   final String text;
-  const DividerWithText({required this.text});
+  const DividerWithText({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {

@@ -81,7 +81,7 @@ class CategoryButton extends StatelessWidget {
   final String text;
   final IconData icon;
 
-  const CategoryButton({Key? key, required this.text, required this.icon}) : super(key: key);
+  const CategoryButton({super.key, required this.text, required this.icon});
 
   @override
   Widget build(BuildContext context) {

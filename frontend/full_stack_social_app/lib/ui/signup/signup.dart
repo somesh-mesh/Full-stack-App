@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:full_stack_social_app/ui/login/login_screen.dart';
 import 'package:full_stack_social_app/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 

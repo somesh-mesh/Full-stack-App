@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:full_stack_social_app/ui/acctivity_feed/activity_feed.dart';
-import 'package:full_stack_social_app/ui/home/pages/feed_screen.dart';
-import 'package:full_stack_social_app/ui/home/pages/search_screen.dart';
-import 'package:full_stack_social_app/ui/profile_screen/profile_screen.dart';
+import 'package:full_stack_social_app/presentations/acctivity_feed/activity_feed.dart';
+import 'package:full_stack_social_app/presentations/home/pages/feed_screen.dart';
+import 'package:full_stack_social_app/presentations/home/pages/search_screen.dart';
+import 'package:full_stack_social_app/presentations/profile_screen/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

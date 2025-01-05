@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:full_stack_social_app/presentations/login/divider.dart';
+import 'package:full_stack_social_app/presentations/login/signup_prompt.dart';
 import 'package:full_stack_social_app/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 
@@ -111,68 +113,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-class SignUpPrompt extends StatelessWidget {
-  const SignUpPrompt({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        style: TextStyle( // Default text style
-          color: Colors.grey.shade500,
-          fontSize: 16,
-        ),
-        children: <TextSpan>[
-          TextSpan(text: "Don't have an account? "),
-          TextSpan(
-            text: "Sign up.",
-            style: TextStyle(
-              color: Colors.blue, 
-              decoration: TextDecoration.underline,  
-            ),
-            recognizer: TapGestureRecognizer()..onTap = () {
-               context.go("/signupscreen");
-              
-           },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class DividerWithText extends StatelessWidget {
-  final String text;
-  const DividerWithText({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Expanded(
-          child: Divider(
-            thickness: 1,
-            color: Colors.grey,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        Expanded(
-          child: Divider(
-            thickness: 1,
-            color: Colors.grey,
-          ),
-        ),
-      ],
-    );
-  }
-}

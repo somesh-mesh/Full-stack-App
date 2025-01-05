@@ -1,8 +1,7 @@
 import express from "express";
-import cors from "cors";
 import dotenv from "dotenv";
-import connectDb from "./utils/db.js"; // Make sure the path is correct
-
+import connectDb from "./utils/db.js"; 
+import userRoute from "./routes/userRoute.js"
 dotenv.config();
 
 const app = express();
@@ -18,6 +17,8 @@ app.use(express.json());
 connectDb();
 
 const PORT = process.env.PORT || 3000;
+
+app.use("/api/v1/user", userRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello developer!");
